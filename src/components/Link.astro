@@ -1,0 +1,12 @@
+---
+const { href, color } = Astro.props
+---
+
+<a
+  href={href}
+  target="_blank"
+  rel="noopener noreferrer"
+  class={`${color} w-full h-full relative flex items-center justify-center lg:items-end lg:pb-24 group overflow-clip`}
+>
+  <slot />
+</a>

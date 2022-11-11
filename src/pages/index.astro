@@ -1,6 +1,7 @@
 ---
 // Component Imports
 /* import Button from '../components/Button.astro'; */
+import Link from "../components/Link.astro"
 
 // Full Astro Component Syntax:
 // https://docs.astro.build/core-concepts/astro-components/
@@ -17,12 +18,7 @@
 
   <body>
     <div class="grid h-screen lg:grid-flow-col">
-      <a
-        href="https://twitter.com/adamdotdev"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="bg-[#EBFF63] w-full h-full relative flex items-center justify-center"
-      >
+      <Link href="https://twitter.com/adamdotdev" color="bg-[#EBFF63]">
         <div class="w-14 h-14 absolute">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 171.505 139.378">
             <path
@@ -31,13 +27,12 @@
             ></path>
           </svg>
         </div>
-      </a>
-      <a
-        href="https://youtube.com/@adamdotdev"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="bg-[#25D0AB] w-full h-full relative flex items-center justify-center"
-      >
+      </Link>
+      <Link color="bg-[#25D0AB]" href="https://youtube.com/@adamdotdev">
+        <img
+          src="/youtube.png"
+          class="absolute opacity-0 inset-x-0 -inset-y-56 lg:-inset-y-0 h-screen object-cover group-hover:opacity-30 transition-all"
+        />
         <div class="w-14 h-14 absolute mt-6">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 159 110">
             <path
@@ -47,13 +42,12 @@
             <path fill="#fff" d="M105 55 64.2 31.6v46.8z"></path>
           </svg>
         </div>
-      </a>
-      <a
-        href="https://twitch.tv/adamdotdev"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="bg-[#FCBB02] w-full h-full relative flex items-center justify-center"
-      >
+      </Link>
+      <Link color="bg-[#FCBB02]" href="https://twitch.tv/adamdotdev">
+        <img
+          src="/twitch.png"
+          class="absolute opacity-0 inset-x-0 -inset-y-56 lg:-inset-y-0 h-screen object-cover group-hover:opacity-30 transition-all"
+        />
         <div class="w-14 h-14 absolute">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -70,13 +64,12 @@
             ></path>
           </svg>
         </div>
-      </a>
-      <a
-        href="https://tomorrow.fm"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="bg-[#F69EC5] w-full h-full relative flex items-center justify-center"
-      >
+      </Link>
+      <Link color="bg-[#F69EC5]" href="https://tomorrow.fm">
+        <img
+          src="/tomorrow.png"
+          class="absolute opacity-0 inset-x-0 -inset-y-56 lg:-inset-y-0 h-screen object-cover group-hover:opacity-30 transition-all"
+        />
         <div class="w-14 h-14 absolute">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -90,7 +83,7 @@
             ></path>
           </svg>
         </div>
-      </div>
-    </a>
+      </Link>
+    </div>
   </body>
 </html>
