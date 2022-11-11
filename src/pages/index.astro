@@ -19,6 +19,7 @@ import Link from "../components/Link.astro"
   <body>
     <div class="grid h-screen lg:grid-flow-col">
       <Link href="https://twitter.com/adamdotdev" color="bg-[#EBFF63]">
+        <div class="sr-only">Adam's Twitter</div>
         <div class="w-14 h-14 absolute">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 171.505 139.378">
             <path
@@ -29,8 +30,10 @@ import Link from "../components/Link.astro"
         </div>
       </Link>
       <Link color="bg-[#25D0AB]" href="https://youtube.com/@adamdotdev">
+        <div class="sr-only">Adam's YouTube</div>
         <img
           src="/youtube.png"
+          alt="YouTube"
           class="absolute opacity-0 inset-x-0 -inset-y-56 lg:-inset-y-0 h-screen object-cover group-hover:opacity-30 transition-all"
         />
         <div class="w-14 h-14 absolute mt-6">
@@ -44,8 +47,10 @@ import Link from "../components/Link.astro"
         </div>
       </Link>
       <Link color="bg-[#FCBB02]" href="https://twitch.tv/adamdotdev">
+        <div class="sr-only">Adam's Twitch</div>
         <img
           src="/twitch.png"
+          alt="Twitch"
           class="absolute opacity-0 inset-x-0 -inset-y-56 lg:-inset-y-0 h-screen object-cover group-hover:opacity-30 transition-all"
         />
         <div class="w-14 h-14 absolute">
@@ -66,8 +71,10 @@ import Link from "../components/Link.astro"
         </div>
       </Link>
       <Link color="bg-[#F69EC5]" href="https://tomorrow.fm">
+        <div class="sr-only">Adam's Podcast</div>
         <img
           src="/tomorrow.png"
+          alt="How About Tomorrow?"
           class="absolute opacity-0 inset-x-0 -inset-y-56 lg:-inset-y-0 h-screen object-cover group-hover:opacity-30 transition-all"
         />
         <div class="w-14 h-14 absolute">
