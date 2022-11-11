@@ -4,6 +4,9 @@ import Link from "../components/Link.astro"
 
 // Full Astro Component Syntax:
 // https://docs.astro.build/core-concepts/astro-components/
+const title = "Adam Elmore"
+const description =
+  "Adam Elmore is a developer, AWS Hero, streamer, and other things."
 ---
 
 <html lang="en">
@@ -12,17 +15,23 @@ import Link from "../components/Link.astro"
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
-    <title>Adam Elmore | Software Developer</title>
-    <meta
-      name="description"
-      content="Adam Elmore is a developer, AWS Hero, streamer, and more!"
-    />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:site_name" content="Adam's Personal Site" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://adam.dev" />
+    <meta property="og:image" content="https://adam.dev/banner.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@adamdotdev" />
   </head>
 
   <body>
     <div class="grid h-screen lg:grid-flow-col">
       <Link href="https://twitter.com/adamdotdev" color="bg-[#EBFF63]">
-    <h1 class="text-[#EBFF63] absolute">Adam Elmore's Personal Site</h1>
+        <h1 class="text-[#EBFF63] absolute">Adam Elmore's Personal Site</h1>
         <div class="sr-only">Adam's Twitter</div>
         <div class="w-14 h-14 absolute">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 171.505 139.378">
