@@ -1,5 +1,7 @@
 ---
-const { content } = Astro.props
+const title = "Adam Elmore"
+const description =
+  "Adam Elmore is a developer, AWS Hero, streamer, and other things."
 ---
 
 <html lang="en">
@@ -7,7 +9,18 @@ const { content } = Astro.props
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <title>{content.title}</title>
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:site_name" content="Adam's Personal Site" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://adam.dev" />
+    <meta property="og:image" content="https://adam.dev/banner.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@adamdotdev" />
   </head>
   <body>
     <slot />

@@ -1,5 +1,6 @@
 ---
-const { href, color } = Astro.props
+const { href, color, label, imageSrc, imageAlt, imageClass, containerClass } =
+  Astro.props
 ---
 
 <a
@@ -8,5 +9,18 @@ const { href, color } = Astro.props
   rel="noopener noreferrer"
   class={`${color} w-full h-full relative flex items-center justify-center lg:items-end lg:pb-24 group overflow-clip`}
 >
-  <slot />
+  <div class="sr-only">{label}</div>
+
+  {
+    imageSrc && (
+      <img
+        src={imageSrc}
+        alt={imageAlt ?? label}
+        class={`absolute opacity-0 inset-x-0 -inset-y-56 lg:-inset-y-0 w-screen lg:w-auto lg:h-screen object-cover group-hover:opacity-30 transition-all ${imageClass}`}
+      />
+    )
+  }
+  <div class={`w-14 h-14 absolute ${containerClass}`}>
+    <slot />
+  </div>
 </a>
