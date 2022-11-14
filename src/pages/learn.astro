@@ -30,6 +30,8 @@ import Layout from "../layouts/main.astro"
 
 <script>
   function handleCredentialResponse(response) {
+    console.log(response)
+    window.location.href = "https://buy.stripe.com/dR6aGv7eK9QH1c4dQQ"
     // decodeJwtResponse() is a custom function defined by you
     // to decode the credential response.
     /* const responsePayload = decodeJwtResponse(response.credential) */
