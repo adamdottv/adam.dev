@@ -28,7 +28,7 @@ import Layout from "../layouts/main.astro"
   </div>
 </Layout>
 
-<script>
+<script is:inline>
   function handleCredentialResponse(response) {
     console.log(response)
     window.location.href = "https://buy.stripe.com/dR6aGv7eK9QH1c4dQQ"
